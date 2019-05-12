@@ -287,7 +287,9 @@ void Encoder::sample_now() {
             tim_cnt_sample_ = (int16_t)hw_config_.timer->Instance->CNT;
         } break;
 
-        case MODE_HALL: {
+        case MODE_HALL: 
+        case MODE_SPI_ABS_CUI:
+        case MODE_SPI_ABS_AMS: {
             // do nothing: samples already captured in general GPIO capture
         } break;
 
